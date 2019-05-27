@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<style type="text/css">
+		.logEntry {
+			padding: 2px;
+		}
+
+		.timestamp {
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+  <h1>RxJS Multicasting</h1>
+  <p>Pick the mapping strategy and try to <b>save</b> multiple times to see the sequence of events</p>
+
+  <div>
+    <input type="radio" name="mapping" value="concat" onchange="mappingChanged()">
+    <label for="concat">ConcatMap</label>
+  </div>
+  <div>
+    <input type="radio" name="mapping" onchange="mappingChanged()" value="merge">
+    <label for="merge">MergeMap</label>
+  </div>
+  <div>
+    <input type="radio" name="mapping" onchange="mappingChanged()" value="switch">
+    <label for="switch">SwitchMap</label>
+  </div>
+  <div>
+    <input type="radio" name="mapping" onchange="mappingChanged()" value="exhaust">
+    <label for="exhaust">ExhaustMap</label>
+  </div>
+
+  <button id="save">Save</button>
+  <div id="log"></div>
+
+</html>
